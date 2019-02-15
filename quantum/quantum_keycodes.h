@@ -458,6 +458,7 @@ enum quantum_keycodes {
 #define HYPR(kc) (kc | QK_LCTL | QK_LSFT | QK_LALT | QK_LGUI)
 #define MEH(kc)  (kc | QK_LCTL | QK_LSFT | QK_LALT)
 #define LCAG(kc) (kc | QK_LCTL | QK_LALT | QK_LGUI)
+#define LAG(kc) (kc |  QK_LALT | QK_LGUI)
 #define ALTG(kc) (kc | QK_RCTL | QK_RALT)
 #define SCMD(kc) (kc | QK_LGUI | QK_LSFT)
 #define SWIN(kc) SCMD(kc)

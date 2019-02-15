@@ -12,6 +12,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Keymap 0: Basic layer
+ *  LAG is a special keycode that I define being LALT+LGUI
+ *
+ *
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |    `   |   1  |   2  |   3  |   4  |   5  | Esc  |           |  Del |   6  |   7  |   8  |   9  |   0  |   -    |
@@ -22,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| LCAG |           |  \|  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | LSHIFT |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | CTRL |     |  ALT  |      | LGUI |                                       | Left | Down |  Up  | Right| CTRL |
+ *   | CTRL |     |  ALT  | LAG  | LGUI |                                       | Left | Down |  Up  | Right| CTRL |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |  L2  |       |  L1  |      |
@@ -43,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,       KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   KC_LBRC,
         KC_SLASH,       KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   LCAG(KC_NO),
-        KC_RCTRL,       KC_NO,        KC_LALT,KC_NO,  KC_LGUI,
+        KC_RCTRL,       KC_NO,        KC_LALT, LAG(KC_NO),  KC_LGUI,
                                                       KC_NO,  LT(2,KC_NO),
                                                               KC_HOME,
                                                KC_BSPC, KC_NO,KC_END,
